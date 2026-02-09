@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-project-diagram"></i>
+                    <h1>Data Structure Game</h1>
+                </div>
+                <div class="user-controls">
+                    <div class="score-display">
+                        <span>Score: </span>
+                        <span id="score-value">0</span>
+                    </div>
+                    <button class="btn btn-outline" id="settings-btn">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Level Info Panel -->
+            <div class="panel level-info">
+                <h2>Level 1: Stack Basics</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                    <span>2/5 puzzles completed</span>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="game-container">
+                <!-- Instructions Panel -->
+                <div class="panel instructions-panel">
+                    <h3>Instructions</h3>
+                    <div class="instructions-content">
+                        <p>Implement a stack with the following operations:</p>
+                        <ol>
+                            <li>Push the value 5 onto the stack</li>
+                            <li>Push the value 3 onto the stack</li>
+                            <li>Pop the top element from the stack</li>
+                        </ol>
+                        <div class="hint-section">
+                            <button class="btn btn-text" id="hint-btn">
+                                <i class="fas fa-lightbulb"></i> Show Hint
+                            </button>
+                            <div class="hint-content" id="hint-content">
+                                Remember that stacks follow LIFO (Last In, First Out) order.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Panel -->
+                <div class="panel visualization-panel">
+                    <div class="visualization-header">
+                        <h3>Visualization</h3>
+                        <div class="visualization-controls">
+                            <button class="btn btn-icon" title="Zoom In">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="btn btn-icon" title="Zoom Out">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <button class="btn btn-icon" title="Reset View">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="visualization-area" id="visualization-area">
+                        <!-- Data structure visualization will be rendered here -->
+                        <div class="stack-visualization">
+                            <div class="stack-item">3</div>
+                            <div class="stack-item highlight">5</div>
+                            <div class="stack-base">Stack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls Panel -->
+            <div class="panel controls-panel">
+                <div class="controls-group">
+                    <button class="btn btn-secondary" id="reset-btn">
+                        <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button class="btn btn-primary" id="check-btn">
+                        <i class="fas fa-check"></i> Check Solution
+                    </button>
+                </div>
+                <div class="controls-group">
+                    <button class="btn btn-outline" id="prev-btn" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary" id="next-btn">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-message" id="status-message">
+                Ready to start!
+            </div>
+            <div class="timer">
+                <i class="far fa-clock"></i>
+                <span id="timer">00:00</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
