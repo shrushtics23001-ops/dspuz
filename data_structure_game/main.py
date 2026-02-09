@@ -1,3 +1,5 @@
+import os
+os.environ['SDL_VIDEODRIVER']='dummy'
 import pygame
 import sys
 from enum import Enum
