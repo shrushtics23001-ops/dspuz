@@ -1,6 +1,4 @@
 pygame-ce
-numpy==1.26.0
-pyyaml==6.0.1
-gunicorn
+pyyaml
 numpy
 flask
