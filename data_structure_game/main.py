@@ -1,4 +1,4 @@
-import os
+.import os
 os.environ['SDL_VIDEODRIVER']='dummy'
 import pygame
 import sys
@@ -140,3 +140,18 @@ class Game:
 if __name__ == "__main__":
     game = Game()
     game.run()
+
+from threading import Thread
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Game is running!"
+
+def run_web():
+    app.run(host='0.0.0.0', port=10000)
+
+# Start the web server in a separate thread
+Thread(target=run_web).start()
